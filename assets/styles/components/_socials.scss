@@ -1,0 +1,27 @@
+
+.socials {
+    display: flex;
+    margin-bottom: $spacer;
+    &__item {
+        border: 2px solid $white;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $transition-bg;
+        &:hover {
+            background-color: #ffffff6b;
+            transition: $transition-bg;
+        }
+    }
+    &__item + &__item {
+        margin-left: $spacer;
+    }
+    &__icon {
+        width: 17px;
+        height: 17px;
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+}

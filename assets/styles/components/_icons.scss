@@ -1,0 +1,106 @@
+
+// icon base setting
+%icon-base {
+    background-size: contain;
+    background-repeat: no-repeat; 
+    display: inline-block;
+}
+
+// close 
+.icon-close {
+    @extend %icon-base;
+    background-image: url("../img/icons/close.svg");
+    width: 25px;
+    height: 25px;
+    &--white {
+        background-image: url("../img/icons/close-white.svg");
+    }
+}
+
+// arrow right
+.icon-arrow-right {
+    @extend %icon-base;
+    background-image: url("../img/icons/next.svg");
+    width: 15px;
+    height: 15px;
+}
+
+// arrow left
+.icon-arrow-left {
+    @extend %icon-base;
+    background-image: url("../img/icons/prev.svg");
+    width: 15px;
+    height: 15px;
+}
+
+// toggle hamburger
+.toggle-btn {
+    background-color: transparent;
+    width: $spacer-5;
+    height: $spacer-5;
+    position: relative;
+    top: -7px;
+    cursor: pointer;
+    span {
+        display: block;
+        position: relative;
+        height: 2px;
+        background: $black-light;
+        transition: .3s background;
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $black-light;
+            transition: .3s all;
+        }
+        &::after {
+            top: 14px;
+        }
+    }
+    &--active {
+        span {
+            background: 0 0;
+            &::after {
+                -webkit-transform: translateY(-7px) rotate(45deg);
+                -ms-transform: translateY(-7px) rotate(45deg);
+                transform: translateY(-7px) rotate(45deg);
+                -webkit-transform-origin: 50% 50%;
+                -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+            }
+            &::before {
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transform-origin: 50% 50%;
+                -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+            }
+        }
+    }
+}
+
+// Caret
+.icon-caret-down:after {
+    @include caret;
+}
+.icon-caret-up:after {
+    @include caret(up);
+}
+.icon-caret-right:after {
+    @include caret(right);
+}
+.icon-caret-left:before {
+    @include caret(left);
+}
+
+// Arrow
+// Arrow mixin in the mixins file
+
+
+

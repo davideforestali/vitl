@@ -1,0 +1,53 @@
+.hero {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  &__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: inherit;
+    padding-left: $spacer-7;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__subtitle {
+    font-size: $font-size-h4;
+  }
+  &--main {
+    .hero__item {
+      align-items: center;
+      padding-left: 0;
+      text-align: center;
+    }
+    .hero__img {
+      display: none;
+      @include breakpoint(sm) {
+        display: inherit;
+        margin-bottom: -155px;
+      }
+      @include breakpoint(md) {
+        margin-bottom: -125px;
+      }
+      @include breakpoint(lg) {
+        margin-bottom: -145px;
+      }
+      @include breakpoint(xl) {
+        margin-bottom: -160px;
+      }
+    }
+    .hero__title {
+      font-size: $font-size-display4;
+    }
+  }
+  @include breakpoint(md) {
+    flex-wrap: inherit;
+    &__item {
+      width: 50%;
+    }
+    &__img-wrap {
+      width: 50%;
+    }
+  }
+}

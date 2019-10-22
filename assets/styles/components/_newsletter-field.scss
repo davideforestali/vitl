@@ -1,0 +1,14 @@
+
+.newsletter-field {
+  display: flex;
+  &__input {
+    width: 80%;
+  }
+  &__submit {
+    padding: $spacer;
+    background-color: $vitl-yellow;
+    width: 20%;
+    height: 52px; // input height
+    cursor: pointer;
+  }
+}

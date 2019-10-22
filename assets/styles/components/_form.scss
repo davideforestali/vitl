@@ -1,0 +1,26 @@
+
+.form {
+  &__group {
+    margin-bottom: $spacer;
+  }
+  &__label {
+    display: inline-block;
+    margin-bottom: $spacer-2;
+    font-weight: $font-weight-medium;
+  }
+  &__control {
+    display: block;
+    width: 100%;
+    padding: $spacer;
+    border: 1px solid $gray-1;
+    font-weight: $font-weight-bold;
+    &:focus {
+      border-color: $gray-2; 
+    }
+    &--inline {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+  }
+}

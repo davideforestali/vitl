@@ -1,0 +1,31 @@
+
+.btn-primary {
+  @include btn-base;
+  @include btn-hover-effect-reflection;
+}
+
+.btn-secondary {
+  @include btn-base(transparent, $black, $black);
+  @include btn-hover-effect-slide-fill($black);
+}
+
+//modifiers
+
+.btn--radius {
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.btn--lg {
+  font-size: $font-size-h5;
+  padding: $spacer-5 $spacer-7;
+}
+
+.btn--sm {
+  padding: $spacer-3 $spacer-4;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}

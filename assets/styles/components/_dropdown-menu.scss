@@ -1,0 +1,33 @@
+
+.dropdown-menu {
+  margin-top: $spacer-2;
+  max-height: 0;
+  overflow: hidden;
+  transition: $transition-height;
+  &__link {
+    padding: $spacer 0;
+    color: $gray-3;
+    display: block;
+    text-decoration: none;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+
+@include breakpoint(md) {
+  .dropdown-menu {
+    margin-top: 0;
+    &__link {
+      padding: $spacer;
+    }
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: $black-light;
+    width: 15rem;
+  }
+}
+
+      

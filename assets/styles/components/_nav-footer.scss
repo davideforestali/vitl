@@ -1,0 +1,26 @@
+
+.nav-footer {    
+    &__item {
+      display: block;
+      margin-bottom: $spacer-2;
+      text-decoration: none;
+      font-weight: $font-weight-medium;
+      position: relative;
+      font-weight: $font-weight-medium;
+      &:hover {
+        background-color: inherit;
+      }
+    }
+    &__link {
+      color: $white;
+      text-decoration: none;
+      transition: $transition-color;
+      &:hover {
+        color: $vitl-yellow;
+        transition: $transition-color;
+      }
+    }
+}
+
+
+

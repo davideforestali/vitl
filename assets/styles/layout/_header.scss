@@ -1,0 +1,95 @@
+
+.main-header {
+    background-color: $vitl-yellow;
+    padding: $spacer 0;
+    transition: $transition-bg;
+    z-index: map-get($z-layers, 'top');
+    &--active {
+      background-color: $white;
+      transition: $transition-bg;
+    }
+    &--sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: $white;
+        transition: $transition-bg;
+        box-shadow: 1px 1px 7px #00000029;
+        animation: 200ms ease 0s normal forwards 1 fadein;
+    }
+    &--sticky + main {
+      padding-top: 64px; // header height
+    }
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    &__logo {
+      height: 30px;
+      z-index: map-get($z-layers, 'top');
+      @include breakpoint(md) {
+        height: 48px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__nav {
+      &:first-child {
+        padding-top: $spacer-7;
+      }
+    }
+    &__nav-wrapper {
+      position: fixed;
+      max-height: 0;
+      overflow: hidden;
+      background-color: $white;
+      transition: $transition-height;
+      text-align: center;
+      width: 100%;
+      left: 0;
+      top: 64px; // header height
+      height: calc(100vh - 64px); // header height
+      z-index: map-get($z-layers, 'top');
+      &--open {
+        max-height: 100vh;
+        transition: $transition-height;
+      }
+      @include breakpoint(md) {
+        text-align: left;
+        position: unset;
+        max-height: inherit;
+        display: flex;
+        justify-content: space-between;
+        background-color: inherit;
+        height: auto;
+      }
+    }
+    &__toggle-btn {
+      padding-right: 0;
+    }
+    &__close-nav {
+      position: absolute;
+      right: $spacer;
+      top: $spacer;
+    }
+    @include breakpoint(md) {
+      padding: $spacer-5 0;
+        &__nav {
+          padding-top: 0;
+          &:first-child {
+            padding-top: 0;
+          }
+        }
+        &__toggle-btn {
+          display: none;
+        }
+        &__close-nav {
+          display: none;
+        }
+    }
+ }
+

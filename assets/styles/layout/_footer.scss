@@ -1,0 +1,35 @@
+.main-footer {
+    background-color: $black-light;
+    color: $white;
+    padding: $spacer-5 0 $spacer 0;
+    &__logo {
+        height: 60px;
+        margin-bottom: $spacer-5;
+    }
+    &__separator {
+        margin: $spacer-5 0;
+        background-color: $black;
+        @include breakpoint(lg) {
+            margin: $spacer 0;
+        }
+    }
+}
+
+.footer-bottom-section {
+    padding-top: $spacer;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    &__item {
+        margin-top: $spacer;
+        width: 100%;
+        display: inline-block;
+    }
+    @include breakpoint(lg) {
+        flex-wrap: inherit;
+        &__item {
+            margin-left: $spacer;
+            display: inline;
+        }
+    }
+}
